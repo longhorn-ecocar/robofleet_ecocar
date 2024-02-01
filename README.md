@@ -1,3 +1,25 @@
+# EcoCAR Modifications
+
+
+## Locally
+You will need to to clone the repository with the `--recurse-submodules` flag to get the submodules.
+
+You will also need to build amrl_msgs first before building robofleet_client. To do this, you will need to run `make` in the `robofleet_client/amrl_msgs` directory. You will also need to follow the setup instructions for `amrl_msgs`
+
+## Build and run the docker container
+
+```bash
+bash build_docker.sh
+bash run_docker.sh
+```
+
+## In the Docker Container
+Run the helper installer script
+```bash
+cd /home/robofleet_ecocar
+bash install_deps.sh
+```
+
 # Robofleet
 
 ![Overview diagram](https://github.com/ut-amrl/robofleet/blob/1fa0a7acb2895eed4e452c627a4d8cc2d26e241f/overview_diagram.png)
@@ -129,3 +151,12 @@ When JavaScript support for [Flexbuffers][flexbuffers] is [added][flexbuffers js
 [flexbuffers js]: https://github.com/google/flatbuffers/issues/5949
 [generic subscriber]: http://wiki.ros.org/ros_type_introspection/Tutorials/GenericTopicSubscriber 
 [ros_msg_parser]: https://github.com/facontidavide/ros_msg_parser
+
+start client
+ROS_NAMESPACE="robot_name" make run
+
+start server
+yarn start
+
+start webviz
+yarn start
