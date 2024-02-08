@@ -2,6 +2,7 @@
 
 # Install robofleet server dependencies
 cd /home/robofleet_ecocar/robofleet_server
+cp src/config.example.ts src/config.ts
 yarn install && yarn build
 
 # Install amrl_msgs
@@ -14,7 +15,6 @@ make
 cd /home/robofleet_ecocar/robofleet_client
 cp src/config.example.hpp src/config.hpp
 make
-
 
 # Install robofleet_webviz
 cd /home/robofleet_ecocar/robofleet_webviz
