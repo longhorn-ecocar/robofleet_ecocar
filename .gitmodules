@@ -1,6 +1,6 @@
 [submodule "robofleet_client"]
 	path = robofleet_client
-	url = https://github.com/ut-amrl/robofleet_client
+	url = https://github.com/Chai77/robofleet_ecocar_client
 	branch = master
 [submodule "robofleet_server"]
 	path = robofleet_server
@@ -8,7 +8,7 @@
 	branch = master
 [submodule "robofleet_webviz"]
 	path = robofleet_webviz
-	url = https://github.com/ut-amrl/robofleet_webviz
+	url = https://github.com/Chai77/robofleet_ecocar_webviz.git
 	branch = master
 
 [submodule "msg2fbs/flatbuffers"]
