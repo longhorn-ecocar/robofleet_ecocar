@@ -6,6 +6,7 @@ MSG_TYPES=\
 	amrl_msgs/ElevatorCommand\
 	amrl_msgs/ErrorReport\
 	amrl_msgs/Localization2DMsg\
+	amrl_msgs/SensorStatus\
 	amrl_msgs/VisualizationMsg\
 	sensor_msgs/NavSatFix\
 	sensor_msgs/LaserScan\

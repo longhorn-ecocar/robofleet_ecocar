@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Run flatbuffers code
+cd /home/robofleet_ecocar/msg2fbs
+make
+
 # Install robofleet server dependencies
 cd /home/robofleet_ecocar/robofleet_server
 cp src/config.example.ts src/config.ts
@@ -13,7 +17,7 @@ make
 
 # Install robofleet client dependencies
 cd /home/robofleet_ecocar/robofleet_client
-cp src/config.example.hpp src/config.hpp
+cp src/config.ecocar.hpp src/config.hpp
 make
 
 # Install robofleet_webviz

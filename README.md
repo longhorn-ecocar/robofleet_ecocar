@@ -159,4 +159,4 @@ start server
 yarn start
 
 start webviz
-yarn start
+export NODE_OPTIONS=--openssl-legacy-provider && yarn start
