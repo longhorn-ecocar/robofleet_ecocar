@@ -25,7 +25,7 @@ bash install_deps.sh
 start client
 ```bash
 cd /home/robofleet_ecocar/robofleet_client
-ROS_NAMESPACE="robot_name" make run
+ROS_NAMESPACE="leva" make run
 ```
 start server
 ```bash
