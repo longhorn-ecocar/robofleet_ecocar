@@ -20,6 +20,26 @@ cd /home/robofleet_ecocar
 bash install_deps.sh
 ```
 
+## Starting all services 
+
+start client
+```bash
+cd /home/robofleet_ecocar/robofleet_client
+ROS_NAMESPACE="leva" make run
+```
+start server
+```bash
+cd /home/robofleet_ecocar/robofleet_server
+yarn start
+```
+
+start webviz
+```bash
+cd /home/robofleet_ecocar/robofleet_webviz
+export NODE_OPTIONS=--openssl-legacy-provider
+yarn start
+```
+
 # Robofleet
 
 ![Overview diagram](https://github.com/ut-amrl/robofleet/blob/1fa0a7acb2895eed4e452c627a4d8cc2d26e241f/overview_diagram.png)
@@ -152,11 +172,3 @@ When JavaScript support for [Flexbuffers][flexbuffers] is [added][flexbuffers js
 [generic subscriber]: http://wiki.ros.org/ros_type_introspection/Tutorials/GenericTopicSubscriber 
 [ros_msg_parser]: https://github.com/facontidavide/ros_msg_parser
 
-start client
-ROS_NAMESPACE="robot_name" make run
-
-start server
-yarn start
-
-start webviz
-export NODE_OPTIONS=--openssl-legacy-provider && yarn start
