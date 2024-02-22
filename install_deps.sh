@@ -1,5 +1,13 @@
 #!/bin/bash
 
+echo ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH >> ~/.bashrc
+source ~/.bashrc
+
+# Install amrl_msgs
+export ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH
+cd /home/robofleet_ecocar/robofleet_client/amrl_msgs
+make
+
 # Run flatbuffers code
 cd /home/robofleet_ecocar/msg2fbs
 make
@@ -8,12 +16,6 @@ make
 cd /home/robofleet_ecocar/robofleet_server
 cp src/config.example.ts src/config.ts
 yarn install && yarn build
-
-# Install amrl_msgs
-cd /home/robofleet_ecocar/robofleet_client/amrl_msgs
-echo ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH >> ~/.bashrc
-source ~/.bashrc
-make
 
 # Install robofleet client dependencies
 cd /home/robofleet_ecocar/robofleet_client
