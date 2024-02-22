@@ -4,7 +4,7 @@ echo ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH >> ~/.bashrc
 source ~/.bashrc
 
 # Install amrl_msgs
-export ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH
+# export ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH
 cd /home/robofleet_ecocar/robofleet_client/amrl_msgs
 make
 
