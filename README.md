@@ -40,6 +40,12 @@ export NODE_OPTIONS=--openssl-legacy-provider
 yarn start
 ```
 
+## SSH Port forwarding to local machine
+
+```bash
+ssh -L 3000:0.0.0.0:3000 -L 8080:0.0.0.0:8080 <user>@<remote machine>
+```
+
 # Robofleet
 
 ![Overview diagram](https://github.com/ut-amrl/robofleet/blob/1fa0a7acb2895eed4e452c627a4d8cc2d26e241f/overview_diagram.png)
