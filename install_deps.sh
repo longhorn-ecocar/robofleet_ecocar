@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo ROS_PACKAGE_PATH=`pwd`:$ROS_PACKAGE_PATH >> ~/.bashrc
+echo ROS_PACKAGE_PATH=`pwd`/robofleet_client:$ROS_PACKAGE_PATH >> ~/.bashrc
 source ~/.bashrc
 
 # Install amrl_msgs

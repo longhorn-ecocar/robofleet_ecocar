@@ -7,6 +7,10 @@ MSG_TYPES=\
 	amrl_msgs/ErrorReport\
 	amrl_msgs/Localization2DMsg\
 	amrl_msgs/SensorStatus\
+	amrl_msgs/SensorHealth\
+	amrl_msgs/SystemHealth\
+	amrl_msgs/SystemLog\
+	amrl_msgs/CACCStatus\
 	amrl_msgs/VisualizationMsg\
 	sensor_msgs/NavSatFix\
 	sensor_msgs/LaserScan\
