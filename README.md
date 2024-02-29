@@ -40,6 +40,14 @@ export NODE_OPTIONS=--openssl-legacy-provider
 yarn start
 ```
 
+## Development
+
+start publisher script
+```bash
+cd /home/robofleet_ecocar/robofleet_client
+python scripts/test_publisher.py
+```
+
 ## SSH Port forwarding to local machine
 
 ```bash
