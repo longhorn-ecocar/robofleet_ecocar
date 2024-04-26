@@ -1,8 +1,13 @@
 #!/bin/sh
 
+cd $1
+
 export ROBOFLEET_SERVER_PORT=8085
+export REACT_APP_ROBOFLEET_SERVER_PORT=$ROBOFLEET_SERVER_PORT
 
 SAVED_PATH=$PWD
+
+pwd
 
 cd $SAVED_PATH/robofleet_client
 ROS_NAMESPACE="leva" make run > $HOME_DIR/robofleet_client.log &
