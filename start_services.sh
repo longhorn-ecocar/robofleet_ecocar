@@ -15,6 +15,8 @@ export ROS_MASTER_URI=http://$ROS_IP:11311
 export ROBOFLEET_SERVER_PORT=8084
 export REACT_APP_ROBOFLEET_SERVER_PORT=$ROBOFLEET_SERVER_PORT
 
+echo "The port is ${ROBOFLEET_SERVER_PORT}"
+
 SAVED_PATH=$PWD
 
 # start robofleet client
@@ -31,5 +33,3 @@ echo "Started server"
 cd $SAVED_PATH/robofleet_webviz
 export NODE_OPTIONS=--openssl-legacy-provider
 yarn start &> /home/autera-admin/infrastructure/robofleet_ecocar/robofleet_webviz.log
-# yarn start &
-echo "Started webviz"
