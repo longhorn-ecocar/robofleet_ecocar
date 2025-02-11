@@ -10,7 +10,7 @@ You will also need to build amrl_msgs first before building robofleet_client. To
 
 ```bash
 bash build_docker.sh
-bash run_docker.sh
+bash start_docker.sh
 ```
 
 ## In the Docker Container
@@ -24,6 +24,7 @@ bash install_deps.sh
 
 start client
 ```bash
+export ROBOFLEET_SERVER_PORT=8080 
 cd /home/robofleet_ecocar/robofleet_client
 ROS_NAMESPACE="leva" make run
 ```
@@ -174,6 +175,10 @@ When JavaScript support for [Flexbuffers][flexbuffers] is [added][flexbuffers js
 * Allow the encoding of all message types automatically by the robot client*
     * handling dynamically-typed ROS messages in C++ is probably possible [using ShapeShifter][generic subscriber] and [ros_msg_parser][ros_msg_parser] (formerly ros_type_introspection)
     * `msg2fbs` demonstrates how to encode arbitrary message types using `rospy`
+
+## Debugging
+* Delete the robofleet-robots folder in robofleet_server if the LOCK file from the previous session was not deleted
+
 
 [ros]: https://www.ros.org/
 [ros topics]: http://wiki.ros.org/Topics
