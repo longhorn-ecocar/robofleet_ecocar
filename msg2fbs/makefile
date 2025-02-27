@@ -17,6 +17,7 @@ MSG_TYPES=\
 	sensor_msgs/CompressedImage\
 	sensor_msgs/PointCloud2\
 	std_msgs/String\
+	std_msgs/ByteMultiArray\
 	geometry_msgs/PoseStamped\
 	geometry_msgs/PoseWithCovarianceStamped\
 	nav_msgs/Odometry\

@@ -271,6 +271,25 @@ table String {
   __metadata:fb.MsgMetadata;
   data:string (required);
 }
+namespace fb.std_msgs;
+table MultiArrayDimension {
+  __metadata:fb.MsgMetadata;
+  label:string (required);
+  size:uint32;
+  stride:uint32;
+}
+namespace fb.std_msgs;
+table MultiArrayLayout {
+  __metadata:fb.MsgMetadata;
+  dim:[fb.std_msgs.MultiArrayDimension] (required);
+  data_offset:uint32;
+}
+namespace fb.std_msgs;
+table ByteMultiArray {
+  __metadata:fb.MsgMetadata;
+  layout:fb.std_msgs.MultiArrayLayout (required);
+  data:[byte] (required);
+}
 namespace fb.geometry_msgs;
 table Point {
   __metadata:fb.MsgMetadata;

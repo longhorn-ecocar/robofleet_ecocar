@@ -19,6 +19,7 @@ from roslib.message import get_message_class
 # Flatbuffers types considered "scalar"
 scalar_types = {
     "bool",
+    "byte",
     "int8",
     "int16",
     "int32",
@@ -182,7 +183,7 @@ def gen_constants_enums(msg_type):
     yield "namespace {}.{}Constants;".format(msg_type.full_namespace(), msg_type.name)
     
     # https://google.github.io/flatbuffers/flatbuffers_guide_writing_schema.html
-    allowed_enum_types = {"int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64"}
+    allowed_enum_types = {"byte", "int8", "int16", "int32", "int64", "uint8", "uint16", "uint32", "uint64"}
     
     for c in spec.constants:
         if c.type in allowed_enum_types:
