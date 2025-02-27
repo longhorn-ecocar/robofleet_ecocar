@@ -13,6 +13,8 @@ bash build_docker.sh
 bash start_docker.sh
 ```
 
+As a more convenient alternative to running the following commands, you can also run `bash start_docker_with_tmux.sh` for local testing
+
 ## In the Docker Container
 Run the helper installer script
 ```bash
@@ -36,6 +38,7 @@ yarn start
 
 start webviz
 ```bash
+export REACT_APP_ROBOFLEET_SERVER_PORT=8080
 cd /home/robofleet_ecocar/robofleet_webviz
 export NODE_OPTIONS=--openssl-legacy-provider
 yarn start
