@@ -178,6 +178,7 @@ When JavaScript support for [Flexbuffers][flexbuffers] is [added][flexbuffers js
 
 ## Debugging
 * Delete the robofleet-robots folder in robofleet_server if the LOCK file from the previous session was not deleted
+* Check robofleet_ecocar/robofleet_webviz/src/config.ts if you run into undefined url error when trying to view the webpage
 
 
 [ros]: https://www.ros.org/
