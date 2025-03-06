@@ -1,5 +1,11 @@
 # EcoCAR Modifications
 
+## Installing Dependencies
+You will install some dependencies necessary for it to work.
+
+Dependencies:
+- Qt5
+- Qt5 WebSockets
 
 ## Cloning the Repository
 You will need to to clone the repository with the `--recurse-submodules` flag to get the submodules.
