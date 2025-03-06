@@ -1,25 +1,36 @@
 # EcoCAR Modifications
 
 
-## Locally
+## Cloning the Repository
 You will need to to clone the repository with the `--recurse-submodules` flag to get the submodules.
 
 You will also need to build amrl_msgs first before building robofleet_client. To do this, you will need to run `make` in the `robofleet_client/amrl_msgs` directory. You will also need to follow the setup instructions for `amrl_msgs`
 
+```bash
+cd $HOME/robofleet_ecocar/robofleet_client/amrl_msgs
+export ROS_PACKAGE_PATH=$HOME/robofleet_ecocar/robofleet_client/amrl_msgs:$ROS_PACKAGE_PATH
+make
+```
 ## Build and run the docker container
 
 ```bash
 bash build_docker.sh
 bash start_docker.sh
 ```
-
 As a more convenient alternative to running the following commands, you can also run `bash start_docker_with_tmux.sh` for local testing
 
 ## In the Docker Container
 Run the helper installer script
 ```bash
-cd /home/robofleet_ecocar
+cd $HOME/robofleet_ecocar
 bash install_deps.sh
+```
+
+## Local Installation
+Make sure to clone the `robofleet_ecocar` package to the `$HOME` directory on your machine. (if you fail to do so it will not work)
+```bash
+cd $HOME/robofleet_ecocar
+bash install_deps_direct.sh
 ```
 
 ## Starting all services 
@@ -27,19 +38,19 @@ bash install_deps.sh
 start client
 ```bash
 export ROBOFLEET_SERVER_PORT=8080 
-cd /home/robofleet_ecocar/robofleet_client
+cd $HOME/robofleet_ecocar/robofleet_client
 ROS_NAMESPACE="leva" make run
 ```
 start server
 ```bash
-cd /home/robofleet_ecocar/robofleet_server
+cd $HOME/robofleet_ecocar/robofleet_server
 yarn start
 ```
 
 start webviz
 ```bash
 export REACT_APP_ROBOFLEET_SERVER_PORT=8080
-cd /home/robofleet_ecocar/robofleet_webviz
+cd $HOME/robofleet_ecocar/robofleet_webviz
 export NODE_OPTIONS=--openssl-legacy-provider
 yarn start
 ```
@@ -48,7 +59,7 @@ yarn start
 
 start publisher script
 ```bash
-cd /home/robofleet_ecocar/robofleet_client/scripts
+cd $HOME/robofleet_ecocar/robofleet_client/scripts
 python test_publisher.py
 ```
 
