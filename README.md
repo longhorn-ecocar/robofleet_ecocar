@@ -48,8 +48,8 @@ yarn start
 
 start publisher script
 ```bash
-cd /home/robofleet_ecocar/robofleet_client
-python scripts/test_publisher.py
+cd /home/robofleet_ecocar/robofleet_client/scripts
+python test_publisher.py
 ```
 
 ## SSH Port forwarding to local machine
