@@ -8,12 +8,15 @@ export ROS_PACKAGE_PATH=/home/autera-admin/robofleet_ecocar/robofleet_client:$RO
 export ROS_PACKAGE_PATH=/home/autera-admin/infrastructure/ros1_utils/amrl_msgs:$ROS_PACKAGE_PATH
 export ROS_PACKAGE_PATH=/home/autera-admin/datachecker:$ROS_PACKAGE_PATH
 
-export ROS_IP=192.168.131.1
-export ROS_HOSTNAME=192.168.131.1
+export ROS_IP=autera-autobox.local
+export ROS_HOSTNAME=$ROS_IP
 export ROS_MASTER_URI=http://$ROS_IP:11311
 
-export ROBOFLEET_SERVER_PORT=8084
+export ROBOFLEET_SERVER_PORT=4242
 export REACT_APP_ROBOFLEET_SERVER_PORT=$ROBOFLEET_SERVER_PORT
+
+fuser -k $ROBOFLEET_SERVER_PORT/tcp
+echo "Killing all existing processes using port $ROBOFLEET_SERVER_PORT" 
 
 echo "The port is ${ROBOFLEET_SERVER_PORT}"
 
@@ -33,3 +36,4 @@ echo "Started server"
 cd $SAVED_PATH/robofleet_webviz
 export NODE_OPTIONS=--openssl-legacy-provider
 yarn start &> /home/autera-admin/infrastructure/robofleet_ecocar/robofleet_webviz.log
+
